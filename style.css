@@ -10,7 +10,6 @@
 
 body {
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 header {
@@ -84,7 +83,7 @@ nav ul li a:hover::after {
 
 
 /* responsive nav class */
-.show-ul{
+.show-ul {
     position: absolute;
     top: 4rem;
     left: 0;
@@ -99,67 +98,285 @@ nav ul li a:hover::after {
 
 
 /* home section styling  */
-#home {
-  min-height: 100vh;
-  padding: 7rem 3.5rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: #ffffff;
+
+
+
+.main-container {
+    height: calc(100vh - 4rem);
+    width: 100%;
+    background-image: url(assets/home-image.jfif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.home-text {
-  max-width: 50rem;
+.over-lap {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.970);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-text h1 {
-  font-size: 2.7rem;
-  margin-bottom: 0.9rem;
+.main-content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.home-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  width: 100%;
+.main-content h1 {
+    color: #fff;
+    font-family: "jost", sans-serif;
+    text-align: center;
+    font-size: 3rem;
 }
 
-.home-btn {
-  padding: 0.4rem 1.9rem;
-  border: none;
-  border-radius: 0.8rem;
-  cursor: pointer;
-  margin-top: 0.8rem;
-  font-size: 1rem;
-  font-family: sans-serif;
-  background-color: blue;
-  font-weight: 700;
-  color: white;
-  width: 10rem;
-  transition: 0.2s ease;
-}
-
-.home-btn:hover{
-      box-shadow: 0 0 0.8rem blue;
-}
-
-.home-img {
-  width: 27rem;
-  height: 30rem;
-  background: none;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-
-}
-
-
-.home-img img {
-  display: flex;
-  width: 22rem;
-  height: 23rem;
-}
-
-.home-text h1 span{
+.main-content h1 span {
     color: blue;
+}
+
+.main-container p {
+    color: white;
+    text-align: center;
+    font-family: "jost", sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.main-container .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.main-container .btn-container a {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: "jost", sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+    text-decoration: none;
+    box-shadow: 0 0 0.5rem 2px blue;
+}
+
+.main-container .btn-container a:hover {
+    background-color: blue;
+    color: #fff;
+    box-shadow: 0 0 2rem 10px blue;
+}
+
+
+
+
+/* perfumes section */
+
+.perfumes-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: ghostwhite;
+}
+
+.card-heading {
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-heading h1 {
+    font-size: 3em;
+    font-family: "jost", sans-serif;
+    font-style: italic;
+}
+
+.card-container {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.card {
+    width: 25%;
+    height: auto;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem 0.1rem blue;
+    transition: 0.3s;
+    padding: 0 0 1rem 0;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 0 1rem 0.2rem darkblue;
+}
+
+.card .image-container {
+    width: 100%;
+    height: 15.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+}
+
+.card .image-container img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+
+}
+
+.card .card-text {
+    width: 100%;
+    height: 30%;
+}
+
+.card-text h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-text p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.card-text p span {
+    color: red;
+}
+
+.card-text .btn-container {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.btn-container button {
+    padding: 0.4rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: blue;
+    color: #fff;
+    font-weight: 700;
+    font-family: "jost", sans-serif;
+    cursor: pointer;
+}
+
+.btn-container button:hover {
+    background-color: darkblue;
+}
+
+
+
+/* brand section styling */
+.brands-container {
+    width: 100%;
+    min-height: auto;
+    background-color: rgba(0, 0, 139, 0.345);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.brand-heading {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* footer styling */
+
+.footer {
+    background: #111;
+    color: #ddd;
+    padding: 60px 20px 20px;
+    margin-top: 10rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-box h3 {
+    color: blue;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    color: blue;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #fff;
+}
+
+.footer-box i {
+    color: blue;
+    margin-right: 8px;
+    background-color: none;
+}
+
+
+
+.social-links i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.social-links i:hover {
+    background-color: blue;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 1rem .2rem blue;
 }
